@@ -26,8 +26,8 @@ public class C206_CaseStudy {
 
 				if (option == OPTION_VIEW) {
 					// View all items
-					ResourceCentre.viewAllCamcorder(camcorderList);
-					ResourceCentre.viewAllChromebook(chromebookList);
+					ResourceCentre.viewAllCamcorder(menuList);
+					ResourceCentre.viewAllChromebook(orderList);
 
 				} else if (option == OPTION_ADD) {
 					// Add a new item
@@ -37,16 +37,16 @@ public class C206_CaseStudy {
 					int itemType = Helper.readInt("Enter option to select item type > ");
 
 					if (itemType == 1) {
-						// Add a camcorder
-						Camcorder cc = inputCamcorder();
-						ResourceCentre.addCamcorder(camcorderList, cc);
-						System.out.println("Camcorder added");
+						// Add a menu
+						menu m = inputMenu();
+						ResourceCentre.addCamcorder(menuList, m);
+						System.out.println("menu items added");
 
 					} else if (itemType == 2) {
-						// Add Chromebook
-						Chromebook cb = inputChromebook();
-						ResourceCentre.addChromebook(chromebookList, cb);
-						System.out.println("Chromebook added");
+						// Add order
+						order od = inputorder();
+						ResourceCentre.addChromebook(orderList, od);
+						System.out.println("order added");
 
 					} else {
 						System.out.println("Invalid type");
