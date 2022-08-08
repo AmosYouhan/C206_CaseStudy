@@ -79,18 +79,17 @@ public class C206_CaseStudy {
 
 		}
 
-		private static void itemTypeMenu() {
-			C206_CaseStudy.setHeader("ITEM TYPES");
-			System.out.println("1. Camcorder");
+		private static void orderList() {
+			C206_CaseStudy.setHeader("Order List");
+			System.out.println("1. ");
 			System.out.println("2. Chromebook");
 		}
 
-		public static void menu() {
-			C206_CaseStudy.setHeader("RESOURCE CENTRE APP");
-			System.out.println("1. Display Inventory");
-			System.out.println("2. Add item");
-			System.out.println("3. Loan item");
-			System.out.println("4. Return item");
+		public static void menuList() {
+			C206_CaseStudy.setHeader("Menu List");
+			System.out.println("1. Western Food");
+			System.out.println("2. Asian Food");
+			System.out.println("3. Vegetarian Food");
 			System.out.println("5. Quit");
 			Helper.line(80, "-");
 
