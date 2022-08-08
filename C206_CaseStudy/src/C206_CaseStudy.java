@@ -96,13 +96,13 @@ public class C206_CaseStudy {
 		}
 
 		private static void itemTypeMenu() {
-			ResourceCentre.setHeader("ITEM TYPES");
+			C206_CaseStudy.setHeader("ITEM TYPES");
 			System.out.println("1. Camcorder");
 			System.out.println("2. Chromebook");
 		}
 
 		public static void menu() {
-			ResourceCentre.setHeader("RESOURCE CENTRE APP");
+			C206_CaseStudy.setHeader("RESOURCE CENTRE APP");
 			System.out.println("1. Display Inventory");
 			System.out.println("2. Add item");
 			System.out.println("3. Loan item");
@@ -140,7 +140,7 @@ public class C206_CaseStudy {
 			return output;
 		}
 		public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
-			ResourceCentre.setHeader("CAMCORDER LIST");
+			C206_CaseStudy.setHeader("CAMCORDER LIST");
 			String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
 					"AVAILABLE", "DUE DATE","OPTICAL ZOOM");
 			 output += retrieveAllCamcorder(camcorderList);	
@@ -158,7 +158,7 @@ public class C206_CaseStudy {
 		}
 		public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 			
-			ResourceCentre.setHeader("CHROMEBOOK LIST");
+			C206_CaseStudy.setHeader("CHROMEBOOK LIST");
 			String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
 					 "AVAILABLE", "DUE DATE","OPERATING SYSTEM");
 			 output += retrieveAllChromebook(chromebookList);
