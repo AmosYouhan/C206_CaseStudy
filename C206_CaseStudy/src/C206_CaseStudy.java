@@ -21,17 +21,17 @@ public class C206_CaseStudy {
 
 			while (option != OPTION_QUIT) {
 
-				ResourceCentre.menu();
+				 C206_CaseStudy.menu();
 				option = Helper.readInt("Enter an option > ");
 
 				if (option == OPTION_VIEW) {
 					// View all items
-					ResourceCentre.viewAllCamcorder(menuList);
-					ResourceCentre.viewAllChromebook(orderList);
+					 C206_CaseStudy.viewAllCamcorder(menuList);
+					 C206_CaseStudy.viewAllChromebook(orderList);
 
 				} else if (option == OPTION_ADD) {
 					// Add a new item
-					ResourceCentre.setHeader("ADD");			
+					 C206_CaseStudy.setHeader("ADD");			
 					itemTypeMenu();
 					
 					int itemType = Helper.readInt("Enter option to select item type > ");
@@ -39,13 +39,13 @@ public class C206_CaseStudy {
 					if (itemType == 1) {
 						// Add a menu
 						menu m = inputMenu();
-						ResourceCentre.addCamcorder(menuList, m);
+						 C206_CaseStudy.addCamcorder(menuList, m);
 						System.out.println("menu items added");
 
 					} else if (itemType == 2) {
 						// Add order
 						order od = inputorder();
-						ResourceCentre.addChromebook(orderList, od);
+						 C206_CaseStudy.addChromebook(orderList, od);
 						System.out.println("order added");
 
 					} else {
@@ -54,33 +54,33 @@ public class C206_CaseStudy {
 
 				} else if (option == OPTION_LOAN) {
 					// Loan item
-					ResourceCentre.setHeader("LOAN");			
+					C206_CaseStudy.setHeader("LOAN");			
 					itemTypeMenu();
 					
 					int itemType = Helper.readInt("Enter option to select item type > ");
 
 					if (itemType == 1) {
 						// Loan camcorder
-						ResourceCentre.loanCamcorder(camcorderList);
+						C206_CaseStudy.loanCamcorder(camcorderList);
 					} else if (itemType == 2) {
 						// Loan Chromebook
-						ResourceCentre.loanChromebook(chromebookList);
+						C206_CaseStudy.loanChromebook(chromebookList);
 					} else {
 						System.out.println("Invalid type");
 					}
 
 				} else if (option == OPTION_RETURN) {
 					// Return item
-					ResourceCentre.setHeader("RETURN");				
+					C206_CaseStudy.setHeader("RETURN");				
 					itemTypeMenu();
 					
 					int itemType = Helper.readInt("Enter option to select item type > ");
 					if (itemType == 1) {
 						// Return camcorder
-						ResourceCentre.returnCamcorder(camcorderList);
+						C206_CaseStudy.returnCamcorder(camcorderList);
 					} else if (itemType == 2) {
 						// Return Chromebook
-						ResourceCentre.returnChromebook(chromebookList);
+						C206_CaseStudy.returnChromebook(chromebookList);
 					} else {
 						System.out.println("Invalid type");
 					}
@@ -218,7 +218,7 @@ public class C206_CaseStudy {
 		}
 
 		public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
-			ResourceCentre.viewAllCamcorder(camcorderList);
+			C206_CaseStudy.viewAllCamcorder(camcorderList);
 			String tag = Helper.readString("Enter asset tag > ");
 			String due = Helper.readString("Enter due date > ");
 			Boolean isLoaned =doLoanCamcorder(camcorderList, tag, due);
@@ -252,7 +252,7 @@ public class C206_CaseStudy {
 
 		public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 			// write your code here
-			ResourceCentre.viewAllChromebook(chromebookList);
+			C206_CaseStudy.viewAllChromebook(chromebookList);
 			String tag = Helper.readString("Enter asset tag > ");
 			String due = Helper.readString("Enter due date > ");
 			Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
@@ -282,7 +282,7 @@ public class C206_CaseStudy {
 		}
 
 		public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
-			ResourceCentre.viewAllCamcorder(camcorderList);
+			C206_CaseStudy.viewAllCamcorder(camcorderList);
 			String tag = Helper.readString("Enter asset tag > ");
 			Boolean isReturned = doReturnCamcorder(camcorderList, tag);
 			
@@ -311,7 +311,7 @@ public class C206_CaseStudy {
 		}
 		public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 			// write your code here
-			ResourceCentre.viewAllChromebook(chromebookList);
+			C206_CaseStudy.viewAllChromebook(chromebookList);
 			String tag = Helper.readString("Enter asset tag > ");
 			Boolean isReturned = doReturnChromebook(chromebookList, tag);
 			
