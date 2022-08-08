@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class C206_CaseStudy {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		private static final int OPTION_RETURN = 4;
 		private static final int OPTION_LOAN = 3;
@@ -12,9 +10,10 @@ public class C206_CaseStudy {
 		private static final int OPTION_QUIT = 5;
 		public static void main(String[] args) {
 
-			ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
-			ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
-
+			ArrayList<Menu>MenuList = new ArrayList<Menu>();
+			ArrayList<Account> AccountList = new ArrayList<Account>();
+			ArrayList<Order>OrderList = new ArrayList<Order>();
+			
 			camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
 			camcorderList.add(new Camcorder("CC002", "Panasonic HC-MDH2", 10));
 			chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
