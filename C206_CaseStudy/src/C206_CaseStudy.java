@@ -52,35 +52,19 @@ public class C206_CaseStudy {
 						System.out.println("Invalid type");
 					}
 
-				} else if (option == OPTION_LOAN) {
+				} else if (option == OPTION_DELETE) {
 					// Loan item
-					C206_CaseStudy.setHeader("LOAN");			
+					C206_CaseStudy.setHeader("DELETE");			
 					itemTypeMenu();
 					
-					int itemType = Helper.readInt("Enter option to select item type > ");
+					int menuItem = Helper.readInt("Enter option to select item type > ");
 
 					if (itemType == 1) {
-						// Loan camcorder
-						C206_CaseStudy.loanCamcorder(camcorderList);
+						// Loan menu
+						C206_CaseStudy.menu(menuList);
 					} else if (itemType == 2) {
-						// Loan Chromebook
-						C206_CaseStudy.loanChromebook(chromebookList);
-					} else {
-						System.out.println("Invalid type");
-					}
-
-				} else if (option == OPTION_RETURN) {
-					// Return item
-					C206_CaseStudy.setHeader("RETURN");				
-					itemTypeMenu();
-					
-					int itemType = Helper.readInt("Enter option to select item type > ");
-					if (itemType == 1) {
-						// Return camcorder
-						C206_CaseStudy.returnCamcorder(camcorderList);
-					} else if (itemType == 2) {
-						// Return Chromebook
-						C206_CaseStudy.returnChromebook(chromebookList);
+						// Loan order
+						C206_CaseStudy.order(orderList);
 					} else {
 						System.out.println("Invalid type");
 					}
