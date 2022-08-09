@@ -8,38 +8,37 @@ public class C206_CaseStudy {
 		private static final int OPTION_QUIT = 4;
 		public static void main(String[] args) {
 
-			ArrayList<Menu>MenuList = new ArrayList<Menu>();
-			ArrayList<Account> AccountList = new ArrayList<Account>();
-			ArrayList<Order>OrderList = new ArrayList<Order>();
+			ArrayList<Menu>menuList = new ArrayList<Menu>();
+			ArrayList<Account> accountList = new ArrayList<Account>();
+			ArrayList<Order>orderList = new ArrayList<Order>();
 			
-			camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
-			camcorderList.add(new Camcorder("CC002", "Panasonic HC-MDH2", 10));
-			chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
-			chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
+			menuList.add(new Menu("Black Pepper Chicken Chop", "Coke", "Apples"));
+			menuList.add(new Menu("Fried Bee Hoon", "Ice Lemon Tea", "Grapes");
+			menuList.add(new Menu("Vegetarian Chicken Rice", "Fruit Juice", "Watermelon"));
 
 			int option = 0;
 
 			while (option != OPTION_QUIT) {
 
-				 C206_CaseStudy.menu();
+				 C206_CaseStudy.menuList();
 				option = Helper.readInt("Enter an option > ");
 
 				if (option == OPTION_VIEW) {
 					// View all items
-					 C206_CaseStudy.viewAllCamcorder(menuList);
-					 C206_CaseStudy.viewAllChromebook(orderList);
+					 C206_CaseStudy.menuList(menuList);
+					 C206_CaseStudy.Order(orderList);
 
 				} else if (option == OPTION_ADD) {
 					// Add a new item
 					 C206_CaseStudy.setHeader("ADD");			
 					itemTypeMenu();
 					
-					int itemType = Helper.readInt("Enter option to select item type > ");
+					int menuItem = Helper.readInt("Enter option to select item type > ");
 
-					if (itemType == 1) {
+					if (menuItem == 1) {
 						// Add a menu
-						menu m = inputMenu();
-						 C206_CaseStudy.addCamcorder(menuList, m);
+						menu m = menuItem();
+						 C206_CaseStudy.Menu(menuList, m);
 						System.out.println("menu items added");
 
 					} else if (itemType == 2) {
@@ -81,8 +80,10 @@ public class C206_CaseStudy {
 
 		private static void orderList() {
 			C206_CaseStudy.setHeader("Order List");
-			System.out.println("1. ");
-			System.out.println("2. Chromebook");
+			System.out.println("1. First Choice");
+			System.out.println("2. Second Choice");
+			System.out.println("3. Third Choice");
+			
 		}
 
 		public static void menuList() {
@@ -90,7 +91,7 @@ public class C206_CaseStudy {
 			System.out.println("1. Western Food");
 			System.out.println("2. Asian Food");
 			System.out.println("3. Vegetarian Food");
-			System.out.println("5. Quit");
+			System.out.println("4. Quit");
 			Helper.line(80, "-");
 
 		}
