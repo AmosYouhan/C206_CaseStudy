@@ -32,7 +32,7 @@ public class menuItems {
 							
 						}else {
 							menuClass newOrderMenu = createMenuItems();
-							newMenuItems.newlyAddedMenu(newMenuItems, newOrderMenu);
+							menuItems.newlyAddedMenu(newMenuItems, newOrderMenu);
 							System.out.println("Created new order Menu");
 							break;
 						}
@@ -63,7 +63,7 @@ public class menuItems {
 				
 				for(int i = 0; i<newMenuItems.size(); i++) {
 					
-					menuOutput += String.format("%-15s %-20s %-20s %-15s\n", newMenuItems.get(i).getMenuID(),newMenuItems.get(i).getMenuItem(),
+					menuOutput += String.format("%-15s %-50s %-15s\n", newMenuItems.get(i).getMenuID(),newMenuItems.get(i).getMenuItem(),
 							newMenuItems.get(i).getMenuPrice());
 				}
 				return menuOutput;
@@ -71,7 +71,7 @@ public class menuItems {
 		 
 			
 			public static void viewMenuItems(ArrayList<menuClass> newMenuItems) {
-				String menuOutput = String.format("%-15s %-20s %-20s %-15s\n","Menu ID","Menu Item" ,"Menu Price");
+				String menuOutput = String.format("%-15s %-50s %-15s\n","Menu ID","Menu Item" ,"Menu Price");
 				menuOutput += getMenuInfo(newMenuItems);
 				System.out.println(menuOutput);
 			}
@@ -86,11 +86,10 @@ public class menuItems {
 				return addMenu;
 			}
 
-			
-			public static void newlyAddedMenu(ArrayList<menuClass> newMenuItems, menuClass newMenu) {
-				newMenuItems.add(newMenu);
+		
+			public static void newlyAddedMenu(ArrayList<menuClass> newMenuItems, menuClass newOrderMenu) {
+				newMenuItems.add(newOrderMenu);
 			}
-			
 			
 			public static void deleteMenuItems(ArrayList<menuClass> newMenuItems) {
 				int menuID = Helper.readInt("Enter Menu ID:");
