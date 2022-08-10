@@ -17,7 +17,7 @@ public class orderBill {
 	    while (option != 4) {
 	    	Helper.line(50, "=");
 		    System.out.println("Order Bills");
-			System.out.println("1. Add order bill");					
+			System.out.println("1. Add order bill");
 			System.out.println("2. View order bill");
 			System.out.println("3. Delete order bill");
 			System.out.println("4. Quit");
@@ -88,7 +88,7 @@ public class orderBill {
 			return addOrder;
 		}
 
-		
+
 		public static void newlyAddedBill(ArrayList<orderClass> newBill, orderClass newOrderBill) {
 			newBill.add(newOrderBill);
 		}
@@ -99,13 +99,11 @@ public class orderBill {
 			for (int i = 0; i< newBill.size(); i++ ) {
 				if(newBill.get(i).getOrderID() == orderID) {
 					newBill.remove(i);
-					System.out.println("Order ID " + orderID + " deleted!");
+					System.out.println("Order ID " + orderID + "deleted!");
 					
-				}
-				
 			}
 			
-			
 		}	
+		}
 }
 
