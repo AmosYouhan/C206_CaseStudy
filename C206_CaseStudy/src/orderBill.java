@@ -8,9 +8,9 @@ public class orderBill {
 
 		ArrayList<orderClass> newBill = new ArrayList<orderClass>();
 	    
-	    newBill.add(new orderClass(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", 3.50, "Processing"));
-	    newBill.add(new orderClass(1008, "Char Kway Teow, Coke, Papyaya", 4.00, "Processing"));
-	    newBill.add(new orderClass(1009, "Fish & Chips, Ice Lemon Tea, Apple", 5.00, "Processing"));
+	    newBill.add(new orderClass(1007, "Vegetarian Bee Hoon", 3.50, "Processing"));
+	    newBill.add(new orderClass(1008, "Char Kway Teow", 4.00, "Processing"));
+	    newBill.add(new orderClass(1009, "Fish & Chips", 5.00, "Processing"));
 	    
 	    int option = 0;
 	    
@@ -65,7 +65,7 @@ public class orderBill {
 			
 			for(int i = 0; i<newBill.size(); i++) {
 				
-				billOutput += String.format("%-15s %-50s %-50s %-15s\n", newBill.get(i).getOrderID(),newBill.get(i).getOrderItem(),
+				billOutput += String.format("%-15s %-20s %-20s %-15s\n", newBill.get(i).getOrderID(),newBill.get(i).getOrderItem(),
 						newBill.get(i).getOrderPrice(),newBill.get(i).getOrderStat());
 			}
 			return billOutput;
@@ -73,7 +73,7 @@ public class orderBill {
 	 
 		
 		public static void viewOrderBill(ArrayList<orderClass> newBill) {
-			String billOutput = String.format("%-15s %-50s %-50s %-15s\n","Order ID","Order Item" ,"Order Price" ,"Order Status");
+			String billOutput = String.format("%-15s %-20s %-20s %-15s\n","Order ID","Order Item" ,"Order Price" ,"Order Status");
 			billOutput += getOrderInfo(newBill);
 			System.out.println(billOutput);
 		}
@@ -100,7 +100,6 @@ public class orderBill {
 				if(newBill.get(i).getOrderID() == orderID) {
 					newBill.remove(i);
 					System.out.println("Order ID " + orderID + "deleted!");
-					
 			}
 			
 		}	
