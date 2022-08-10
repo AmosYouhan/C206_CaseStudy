@@ -21,7 +21,7 @@ public class lunchboxOrder {
 		System.out.println("3. Delete LunchBox Order");
 		System.out.println("4. Quit");
 		Helper.line(50, "=");
-	    option = Helper.readInt("Enter option number from order menu: ");
+	    option = Helper.readInt("Enter Option(1,2,3,4)>  ");
       
       if(option == 1) {
     	  
