@@ -63,7 +63,7 @@ public class menuItems {
 				
 				for(int i = 0; i<newMenuItems.size(); i++) {
 					
-					menuOutput += String.format("%-15s %-50s %-15s\n", newMenuItems.get(i).getMenuID(),newMenuItems.get(i).getMenuItem(),
+					menuOutput += String.format("%-15s %-40s %-15s\n", newMenuItems.get(i).getMenuID(),newMenuItems.get(i).getMenuItem(),
 							newMenuItems.get(i).getMenuPrice());
 				}
 				return menuOutput;

@@ -73,7 +73,7 @@ public class orderBill {
 	 
 		
 		public static void viewOrderBill(ArrayList<orderClass> newBill) {
-			String billOutput = String.format("%-15s %-50s %-50s %-15s\n","Order ID","Order Item" ,"Order Price" ,"Order Status");
+			String billOutput = String.format("%-15s %-50s %-40s %-15s\n","Order ID","Order Item" ,"Order Price" ,"Order Status");
 			billOutput += getOrderInfo(newBill);
 			System.out.println(billOutput);
 		}
