@@ -34,7 +34,9 @@ public class C206_CaseStudy {
 					C206_CaseStudy.setHeader("ADD");			
 				}else if(option == OPTION_UPDATE) {
 					
-				}else if (option == OPTION_DELETE);
+				}else if (option == OPTION_DELETE) {
+					
+				}
 			}
 		}
 
