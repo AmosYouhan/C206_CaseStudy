@@ -9,6 +9,7 @@ public class C206_CaseStudy {
 			ArrayList<lunchboxOrderClass> newOrder = new ArrayList<lunchboxOrderClass>();
 			ArrayList<orderClass> newBill = new ArrayList<orderClass>();
 			ArrayList<createMenu> menuList = new ArrayList<createMenu>();
+			System.out.println("Hi");
 			
 			newAccount.add(new Account(1000, "alpha", "Jack", "Reacher"));
 		    newAccount.add(new Account(1001, "beta", "John", "Wick"));

@@ -9,7 +9,7 @@ public class createMenuMain {
 		menuList.add(new createMenu(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", "Healthy", 3.50));
 	    menuList.add(new createMenu(1008, "Char Kway Teow, Coke, Papyaya", "Refreshing", 4.00));
 	    menuList.add(new createMenu(1009, "Fish & Chips, Ice Lemon Tea, Apple", "Premium", 5.00));
-	    
+	    Systen.out.println("Hi");
 	   int option = 0;
 	   
 	   while (option != 4) {
