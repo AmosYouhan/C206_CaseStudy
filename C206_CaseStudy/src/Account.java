@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Account {
 	
 	private int accId;
@@ -43,5 +45,6 @@ public class Account {
 	public void setsName(String sName) {
 		this.sName = sName;
 	}
+
 
 }
