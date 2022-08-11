@@ -2,17 +2,18 @@
 public class createMenu {
 	private int menuID;
 	private String menuItems;
+	private String menuDescription;
 	private Double menuPrice;
 	
 
 
-	public createMenu(int menuID, String menuItems, Double menuPrice) {
+	public createMenu(int menuID, String menuItems, String menuDescription, double menuPrice) {
 		super();
 		this.menuID = menuID;
 		this.menuItems = menuItems;
+		this.menuDescription = menuDescription;
 		this.menuPrice = menuPrice;
 	}
-
 
 
 	public int getMenuID() {
@@ -39,6 +40,18 @@ public class createMenu {
 
 
 
+	public String getMenuDescription() {
+		return menuDescription;
+	}
+
+
+
+	public void setMenuDescription(String menuDescription) {
+		this.menuDescription = menuDescription;
+	}
+
+
+
 	public Double getMenuPrice() {
 		return menuPrice;
 	}
@@ -48,6 +61,12 @@ public class createMenu {
 	public void setMenuPrice(Double menuPrice) {
 		this.menuPrice = menuPrice;
 	}
+
+
+
+
+
+	
 
 	
 }
