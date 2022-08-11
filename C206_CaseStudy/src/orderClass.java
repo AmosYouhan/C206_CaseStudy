@@ -47,6 +47,11 @@ public class orderClass {
 		this.orderStat = orderStat;
 	}
 
+	public boolean equalsIgnoreCase(String orderItem2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 	
 
 	

@@ -433,6 +433,26 @@ public class C206_CaseStudy {
 			}	
 		}
 		
+		public static boolean doDeleteOrderBill(ArrayList<orderClass> orderBillList, String orderItem) {
+			// TODO Auto-generated method stub
+			
+		
+			
+			boolean isDelete = false;
+			
+			for(int i = 0; i< orderBillList.size(); i++) {
+				
+				if(orderItem.equalsIgnoreCase(orderBillList.get(i).getOrderItem())) {
+					
+					orderBillList.remove(i);
+					
+					isDelete = true;
+				}
+			}
+			return isDelete;
+		}
+		
+		
 		public static void newlyMonthlyMenu(ArrayList<createMenu> menuList, createMenu newMonthlyMenu) {
 	    	menuList.add(newMonthlyMenu);
 	}
@@ -486,5 +506,7 @@ public class C206_CaseStudy {
 						
 					}	
 				}
-			}		
+			}
+
+				
 }	

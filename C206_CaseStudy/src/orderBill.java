@@ -104,5 +104,21 @@ public class orderBill {
 			
 		}	
 		}
+		
+		public static boolean doDeleteOrderBill(ArrayList<orderClass> orderBillList, String OrderItem) {
+			
+			boolean isDelete = false;
+			
+			for(int i = 0; i< orderBillList.size(); i++) {
+				
+				if(OrderItem.equalsIgnoreCase(orderBillList.get(i).getOrderItem())) {
+					
+					orderBillList.remove(i);
+					
+					isDelete = true;
+				}
+			}
+			return isDelete;
+		}
 }
 
