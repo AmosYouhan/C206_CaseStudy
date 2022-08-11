@@ -6,7 +6,7 @@ public class createMenu {
 	private Double menuPrice;
 	
 
-	System.out.println("Hi");
+	
 	public createMenu(int menuID, String menuItems, String menuDescription, double menuPrice) {
 		super();
 		this.menuID = menuID;

@@ -10,7 +10,7 @@ public class lunchboxOrder {
     newOrder.add(new lunchboxOrderClass(1007, "2022-08-09", 3.50,"Vegetarian Bee Hoon, Apple Juice, Watermelon"));
     newOrder.add(new lunchboxOrderClass(1008, "2022-08-10", 5.50,"Char Kway Teow, Coke, Papyaya"));
     newOrder.add(new lunchboxOrderClass(1009, "2022-08-11", 4.50,"Fish & Chips, Ice Lemon Tea, Apple"));
-    System.out.println("Hi");
+    
     int option = 0;
     
     while (option != 4) {
