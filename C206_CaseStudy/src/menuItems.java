@@ -8,7 +8,7 @@ public class menuItems {
 		ArrayList<menuClass> newMenuItems = new ArrayList<menuClass>();
 		
 		newMenuItems.add(new menuClass(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", 3.50));
-	    newMenuItems.add(new menuClass(1008, "Char Kway Teow, Coke, Papyaya", 4.00));
+	    newMenuItems.add(new menuClass(1008, "Char Kway Teow, Coke, Papaya", 4.00));
 	    newMenuItems.add(new menuClass(1009, "Fish & Chips, Ice Lemon Tea, Apple", 5.00));
 	    
 	   int option = 0;

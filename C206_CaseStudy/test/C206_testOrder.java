@@ -92,7 +92,7 @@ public class C206_testOrder {
 		//The order Bill just added is as same as the first order Bill of the list
 		assertSame("Test that order bill is added same as 1st order bill of the list?", newOrderBill, orderBillList.get(0));
 				
-		//Add another order Bill, test The size of the list is 2?
+		//Given that the size of the list is now 3, want to delete one of it to revert back list size to 2
 		C206_CaseStudy.doDeleteOrderBill(orderBillList,newOrderBill.getOrderItem());
 		assertEquals("Test that order bill arraylist size is 2?", 2, orderBillList.size());
 		assertSame("Test that the second order bill now is the first order bill in the list?", newOrderBill2, orderBillList.get(0));

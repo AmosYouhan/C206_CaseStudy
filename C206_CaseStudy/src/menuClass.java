@@ -36,5 +36,6 @@ public class menuClass {
 		public void setMenuPrice(Double menuPrice) {
 			this.menuPrice = menuPrice;
 		}
+		
 	}
 

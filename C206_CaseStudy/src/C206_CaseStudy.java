@@ -16,19 +16,19 @@ public class C206_CaseStudy {
 		    newAccount.add(new Account(1002, "charlie", "James", "Bond"));
 		    
 		    newMenuItems.add(new menuClass(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", 3.50));
-		    newMenuItems.add(new menuClass(1008, "Char Kway Teow, Coke, Papyaya", 4.00));
+		    newMenuItems.add(new menuClass(1008, "Char Kway Teow, Coke, Papaya", 4.00));
 		    newMenuItems.add(new menuClass(1009, "Fish & Chips, Ice Lemon Tea, Apple", 5.00));
 		    
 		    newOrder.add(new lunchboxOrderClass(1007, "2022-08-09", 3.50,"Vegetarian Bee Hoon, Apple Juice, Watermelon"));
-		    newOrder.add(new lunchboxOrderClass(1008, "2022-08-10", 5.50,"Char Kway Teow, Coke, Papyaya"));
+		    newOrder.add(new lunchboxOrderClass(1008, "2022-08-10", 5.50,"Char Kway Teow, Coke, Papaya"));
 		    newOrder.add(new lunchboxOrderClass(1009, "2022-08-11", 4.50,"Fish & Chips, Ice Lemon Tea, Apple"));
 		    
 		    newBill.add(new orderClass(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", 3.50, "Processing"));
-		    newBill.add(new orderClass(1008, "Char Kway Teow, Coke, Papyaya", 4.00, "Processing"));
+		    newBill.add(new orderClass(1008, "Char Kway Teow, Coke, Papaya", 4.00, "Processing"));
 		    newBill.add(new orderClass(1009, "Fish & Chips, Ice Lemon Tea, Apple", 5.00, "Processing"));
 		    
 		    menuList.add(new createMenu(1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", "Healthy", 3.50));
-		    menuList.add(new createMenu(1008, "Char Kway Teow, Coke, Papyaya", "Refreshing", 4.00));
+		    menuList.add(new createMenu(1008, "Char Kway Teow, Coke, Papaya", "Refreshing", 4.00));
 		    menuList.add(new createMenu(1009, "Fish & Chips, Ice Lemon Tea, Apple", "Premium", 5.00));
 		    
 			int enterOption = 0;
