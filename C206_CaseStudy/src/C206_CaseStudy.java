@@ -293,6 +293,25 @@ public class C206_CaseStudy {
 			}	
 		}
 		
+		public static boolean doDeleteAccount(ArrayList<Account> accountList, String password) {
+			// TODO Auto-generated method stub
+			
+		
+			
+			boolean isDelete = false;
+			
+			for(int i = 0; i< accountList.size(); i++) {
+				
+				if(password.equalsIgnoreCase(accountList.get(i).getPassword())) {
+					
+					accountList.remove(i);
+					
+					isDelete = true;
+				}
+			}
+			return isDelete;
+		}
+		
 		public static String getMenuInfo(ArrayList<menuClass> newMenuItems) {
 			String menuOutput = "";
 			
@@ -383,21 +402,16 @@ public class C206_CaseStudy {
 			}
 
 
-		  public static String getLBOrderInfo(ArrayList<lunchboxOrderClass> newOrder) {
-				String LBorderOutput = "";
+		  public static String getLBOrder(ArrayList<lunchboxOrderClass> newOrder) {
+				String lbOutput = "";
 				
-				int orderID = Helper.readInt("Find LunchBox Order> Key in order id > ");
-			     
 				for(int i = 0; i<newOrder.size(); i++) {
-					 if(newOrder.get(i).getLBorderId() == orderID){
-				      lunchboxOrderClass LB = newOrder.get(i);
-					LBorderOutput += String.format("%-10d %-10s %-15s %-10s\n", LB.getLBorderId(), LB.getLBOrderDate(), LB.getLBOrderPrice(),LB.getLBItems());
-							
+					
+					lbOutput += String.format("%-10d %-10s %-15s %-10s\n",  newOrder.get(i).getLBorderId(), newOrder.get(i).getLBOrderDate(), newOrder.get(i).getLBOrderPrice(), newOrder.get(i).getLBItems());
 				}
-				
+				return lbOutput;
 			}
-				return LBorderOutput;
-		  }
+		 
 			public static void  ViewLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
 		    // TODO Auto-generated method stub
 		    Helper.line(50,  "=");
@@ -406,7 +420,7 @@ public class C206_CaseStudy {
 		     
 		      String LBorderOutput = String.format("%-10s %-10s %-15s %-10s\n", "ID" , "DATE" , "PRICE" , "ITEMS");
 		      
-				LBorderOutput += getLBOrderInfo(newOrder);
+				LBorderOutput += getLBOrder(newOrder);
 				System.out.println(LBorderOutput);
 		     
 		           
@@ -549,6 +563,25 @@ public class C206_CaseStudy {
 						
 					}	
 				}
+			}
+			
+			public static boolean doDeleteMonthlyMenu(ArrayList<createMenu> monthlyList, String menuItems) {
+				// TODO Auto-generated method stub
+				
+			
+				
+				boolean isDelete = false;
+				
+				for(int i = 0; i< monthlyList.size(); i++) {
+					
+					if(menuItems.equalsIgnoreCase(monthlyList.get(i).getMenuItems())) {
+						
+						monthlyList.remove(i);
+						
+						isDelete = true;
+					}
+				}
+				return isDelete;
 			}
 
 			
