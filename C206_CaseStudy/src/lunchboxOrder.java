@@ -24,18 +24,20 @@ public class lunchboxOrder {
       option = Helper.readInt("Enter Option(1,2,3,4)>  ");
       
       if(option == 1) {
-        
-       int id = Helper.readInt("Enter new lunch box ID");
-       String date = Helper.readString("Enter new lunchbox order date");
-       double price = Helper.readDouble("Enter lunch box price");
-       String items = Helper.readString("Enter lunchbox items");
-      boolean isAdded = lunchboxOrder.AddlunchboxOrder(newOrder, id, date,price,items);
-      if(isAdded) {
-        System.out.println("New member added.");
-      } else {
-        System.out.println("Failed to add.");
-      }
-}
+    	  int LBorderApplicable = Helper.readInt("Enter order ID check whether it is applicable: ");
+			for(int i = 0; i<newOrder.size(); i++) {
+				
+				if(newOrder.get(i).getLBorderId() == LBorderApplicable) {
+					System.out.println("Order ID already existed");
+					
+				}else {
+					lunchboxOrderClass newLBorder = createLBorder();
+					lunchboxOrder.newlyAddedLBOrder(newOrder, newLBorder);
+					System.out.println("Created new Lunch box order");
+					break;
+				}
+			}
+	    }
       else if (option ==2) {
         lunchboxOrder.ViewLunchBoxOrder(newOrder);
       }
@@ -52,7 +54,9 @@ public class lunchboxOrder {
     
   }
 
-  static void DeleteLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
+	
+ 
+  public static void DeleteLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
     // TODO Auto-generated method stub
     int orderID = Helper.readInt("Enter Order ID:");
     for (int i = 0; i< newOrder.size(); i++ ) {
@@ -62,49 +66,77 @@ public class lunchboxOrder {
       }
     }
   }
+  public static boolean doDeleteLBorder(ArrayList<lunchboxOrderClass> newOrder, String LBItems) {
+		
+		boolean isDelete = false;
+		
+		for(int i = 0; i< newOrder.size(); i++) {
+			
+			if(LBItems.equalsIgnoreCase(newOrder.get(i).getLBItems())) {
+				
+				newOrder.remove(i);
+				
+				isDelete = true;
+			}
+		}
+		return isDelete;
+	}
 
-  static void ViewLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
+
+  public static String getLBOrderInfo(ArrayList<lunchboxOrderClass> newOrder) {
+		String LBorderOutput = "";
+		
+		int orderID = Helper.readInt("Find LunchBox Order> Key in order id > ");
+	     
+		for(int i = 0; i<newOrder.size(); i++) {
+			 if(newOrder.get(i).getLBorderId() == orderID){
+		      lunchboxOrderClass LB = newOrder.get(i);
+			LBorderOutput += String.format("%-10d %-10s %-15s %-10s\n", LB.getLBorderId(), LB.getLBOrderDate(), LB.getLBOrderPrice(),LB.getLBItems());
+					
+		}
+		
+	}
+		return LBorderOutput;
+  }
+	public static void  ViewLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
     // TODO Auto-generated method stub
     Helper.line(50,  "=");
       System.out.println(" VIEW LUNCHBOX ORDER");
       Helper.line(50,  "=");
-      //print header
+     
+      String LBorderOutput = String.format("%-10s %-10s %-15s %-10s\n", "ID" , "DATE" , "PRICE" , "ITEMS");
       
-      String output = String.format("%-10s %-10s %-15s %-10s\n", "ID" , "DATE" , "PRICE" , "ITEMS");
-      //using String.format print out the input order
-      
-      int orderID = Helper.readInt("Find LunchBox Order> Key in order id > ");
-      //ask user to input the age they want to find older than
-      for (int i = 0; i<newOrder.size(); i++)
-        //using for loop to run the  list
-      {
-        if(newOrder.get(i).getLBorderId() == orderID){
-          lunchboxOrderClass LB = newOrder.get(i);
-          output += String.format("%-10d %-10s %-15s %-10s\n", LB.getLBorderId(), LB.getLBOrderDate(), LB.getLBOrderPrice(),LB.getLBItems());
+		LBorderOutput += getLBOrderInfo(newOrder);
+		System.out.println(LBorderOutput);
+     
            
         }
-      }
-      System.out.println(output);
-      //print the output
-        }
-    
+      
+   
+     
 
-  static boolean AddlunchboxOrder(ArrayList<lunchboxOrderClass> newOrder, int id, String date,
-      double price, String items) {
-    boolean isAdded = false;
-    //creating a boolean to check if is added 
-    //initialised to false
-    
-    newOrder.add(new lunchboxOrderClass(id,date,price,items));
-    //add in the member using .add method
-    
-    isAdded = true;  
-    //when its added isAdded is true
-    
-    return isAdded;
-    //return isAdded
-    
-  }
+
+  public static lunchboxOrderClass createLBorder() {
+	  int id = Helper.readInt("Enter new lunch box ID");
+    	 String date = Helper.readString("Enter new lunchbox order date");
+    	 double price = Helper.readDouble("Enter lunch box price");
+    	 String items = Helper.readString("Enter lunchbox items");
+
+    	 lunchboxOrderClass addLBorder = new lunchboxOrderClass(id, date, price, items);
+		return addLBorder;
+	}
+
+
+  public static void newlyAddedLBOrder(ArrayList<lunchboxOrderClass> newOrder, lunchboxOrderClass newLBorder) {
+		newOrder.add(newLBorder);
+	}
+	
+
+
+
+	
+	
+
 
 
 }
