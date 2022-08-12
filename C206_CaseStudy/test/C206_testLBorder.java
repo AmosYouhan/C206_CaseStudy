@@ -100,7 +100,7 @@ public class C206_testLBorder {
 		assertSame("Test that the third lunch box order now is the second lunch box order in the list?", newOrder3, LBorderList.get(1));
 		
 	}
-	
+
 	
 	
 	
@@ -108,7 +108,7 @@ public class C206_testLBorder {
 	@After
 	public void tearDown() throws Exception {
 		newOrder = null;
-		newOrder2 = null;
+		newOrder = null;
 		newOrder3 = null;
 		LBorderList = null;
 		
