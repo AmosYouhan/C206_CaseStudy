@@ -108,7 +108,7 @@ public class C206_testLBorder {
 	@After
 	public void tearDown() throws Exception {
 		newOrder = null;
-		newOrder = null;
+		newOrder2 = null;
 		newOrder3 = null;
 		LBorderList = null;
 		
