@@ -55,7 +55,7 @@ public class C206_testOrder {
 	@Test
 	public void testRetrieveAllOrderBill() {
 		// Test if order bill list is not null but empty, so that can add a new order bill
-				assertNotNull("Test if there is valid Camcorder arraylist to add to", orderBillList);
+				assertNotNull("Test if there is valid order bill arraylist to add to", orderBillList);
 				
 				//test if the list of order bill retrieved from the CaseStudy is empty
 				String allOrderBill= C206_CaseStudy.getOrderInfo(orderBillList);

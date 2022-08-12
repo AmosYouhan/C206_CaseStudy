@@ -332,7 +332,26 @@ public class C206_CaseStudy {
 					
 				}	
 			}
-		}	
+		}
+		
+		public static boolean doDeleteMenuItem(ArrayList<menuClass> menuItemList, String menuItem) {
+			// TODO Auto-generated method stub
+			
+		
+			
+			boolean isDelete = false;
+			
+			for(int i = 0; i< menuItemList.size(); i++) {
+				
+				if(menuItem.equalsIgnoreCase(menuItemList.get(i).getMenuItem())) {
+					
+					menuItemList.remove(i);
+					
+					isDelete = true;
+				}
+			}
+			return isDelete;
+		}
 		
 		public static void DeleteLunchBoxOrder(ArrayList<lunchboxOrderClass> newOrder) {
 		    // TODO Auto-generated method stub
