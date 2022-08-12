@@ -36,68 +36,68 @@ public class C206_testLBorder {
 	@Test
 	public void testAddOrder() {
 		
-		// OrderBill list is not null, so that can add a new item
+		// lunch box order list is not null, so that can add a new item
 		assertNotNull("Test if there is valid lunch box order arraylist to add to", LBorderList);
 		
-		//Given an empty list, after adding 1 order Bill, the size of the list is 1
-		C206_CaseStudy.AddlunchboxOrder(LBorderList, newOrder);		
-		assertEquals("Test if that order bill arraylist size is 1?", 1, LBorderList.size());
+		//Given an empty list, after adding 1 lunch box order, the size of the list is 1
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder);		
+		assertEquals("Test if that lunch box order arraylist size is 1?", 1, LBorderList.size());
 		
-		//The order Bill just added is as same as the first order Bill of the list
-		assertSame("Test that order bill is added same as 1st order bill of the list?", newOrder, LBorderList.get(0));
+		//The lunch box order just added is as same as the first lunch box order of the list
+		assertSame("Test that lunch box order is added same as 1st lunch box order of the list?", newOrder, LBorderList.get(0));
 		
-		//Add another order Bill, test The size of the list is 2?
-		C206_CaseStudy.AddlunchboxOrder(LBorderList, newOrder2);
-		C206_CaseStudy.AddlunchboxOrder(LBorderList, newOrder3);
-		assertEquals("Test that order bill arraylist size is 3?", 3, LBorderList.size());
-		assertSame("Test that order bill is added same as 3rd order bill of the list?", newOrder3, LBorderList.get(2));
+		//Add another lunch box order, test The size of the list is 2?
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder2);
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder3);
+		assertEquals("Test that lunch box order arraylist size is 3?", 3, LBorderList.size());
+		assertSame("Test that lunch box order is added same as 3rd lunch box order of the list?", newOrder3, LBorderList.get(2));
 	}
 	
 	@Test
-	public void testRetrieveAllOrderBill() {
-		// Test if order bill list is not null but empty, so that can add a new order bill
-				assertNotNull("Test if there is valid order bill arraylist to add to", orderBillList);
+	public void testRetrieveAllLBorder() {
+		// Test if lunch box order list is not null but empty, so that can add a new lunch box order
+				assertNotNull("Test if there is valid order bill arraylist to add to", LBorderList);
 				
-				//test if the list of order bill retrieved from the CaseStudy is empty
-				String allOrderBill= C206_CaseStudy.getOrderInfo(orderBillList);
+				//test if the list of lunch box order retrieved from the CaseStudy is empty
+				String allLBOrder= C206_CaseStudy.getLBOrderInfo(LBorderList);
 				String testOutput = "";
-				assertEquals("Check that order bill list", testOutput, allOrderBill);
+				assertEquals("Check that lunch box order list", testOutput, allLBOrder);
 						
-				//Given an empty list, after adding 2 order bill, test if the size of the list is 2
-				C206_CaseStudy.newlyAddedBill(orderBillList, newOrderBill);
-				C206_CaseStudy.newlyAddedBill(orderBillList, newOrderBill2);
-				assertEquals("Test if that order bill arraylist size is 2?", 2, orderBillList.size());
+				//Given an empty list, after adding lunch box order, test if the size of the list is 2
+				C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder);
+				C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder2);
+				assertEquals("Test if that lunch box order arraylist size is 2?", 2, LBorderList.size());
 				
-				//test if the expected output string same as the list of order bill retrieved from the CaseStudy
-				allOrderBill= C206_CaseStudy.getOrderInfo(orderBillList);
+				//test if the expected output string same as the list of lunch box order retrieved from the CaseStudy
+				allLBOrder= C206_CaseStudy.getLBOrderInfo(LBorderList);
 
-				testOutput = String.format("%-15s %-50s %-50s %-15s\n",1007, "Vegetarian Bee Hoon, Apple Juice, Watermelon", 3.50, "Processing");
-				testOutput += String.format("%-15s %-50s %-50s %-15s\n",1008, "Char Kway Teow, Coke, Papyaya", 4.00, "Processing");
+				testOutput = String.format("%-10d %-10s %-15s %-10s\n",1007, "2022-08-09", 3.50,"Vegetarian Bee Hoon, Apple Juice, Watermelon");
+				testOutput += String.format("%-10d %-10s %-15s %-10s\n",1008, "2022-08-10", 5.50,"Char Kway Teow, Coke, Papyaya");
 			
-				assertEquals("Check that order bill list", testOutput, allOrderBill);
+				assertEquals("Check that lunch box order list", testOutput, allLBOrder);
 		
 	}
 	
 	@Test
 	
-	public void testDeleteOrderBill() {
-		// OrderBill list is not null, so that can delete a order bill
-		assertNotNull("Test if there is valid order bill arraylist to add to", orderBillList);
+	public void testDeleteLBOrder() {
+		// lunch box order list is not null, so that can delete a lunch box order
+		assertNotNull("Test if there is valid lunch box order arraylist to add to", LBorderList);
 				
-		//Given an empty list, after adding 3 order Bill, the size of the list is 3
-		C206_CaseStudy.newlyAddedBill(orderBillList, newOrderBill);	
-		C206_CaseStudy.newlyAddedBill(orderBillList, newOrderBill2);	
-		C206_CaseStudy.newlyAddedBill(orderBillList, newOrderBill3);	
-		assertEquals("Test if that order bill arraylist size is 3?", 3, orderBillList.size());
+		//Given an empty list, after adding 3 lunch box order, the size of the list is 3
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder);	
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder2);	
+		C206_CaseStudy.newlyAddedLBOrder(LBorderList, newOrder3);	
+		assertEquals("Test if that lunch box order arraylist size is 3?", 3, LBorderList.size());
 				
-		//The order Bill just added is as same as the first order Bill of the list
-		assertSame("Test that order bill is added same as 1st order bill of the list?", newOrderBill, orderBillList.get(0));
+		//The lunch box order just added is as same as the first lunch box order of the list
+		assertSame("Test that lunch box order is added same as 1st lunch box order of the list?", newOrder, LBorderList.get(0));
 				
-		//Add another order Bill, test The size of the list is 2?
-		C206_CaseStudy.doDeleteOrderBill(orderBillList,newOrderBill.getOrderItem());
-		assertEquals("Test that order bill arraylist size is 2?", 2, orderBillList.size());
-		assertSame("Test that the second order bill now is the first order bill in the list?", newOrderBill2, orderBillList.get(0));
-		assertSame("Test that the third order bill now is the second order bill in the list?", newOrderBill3, orderBillList.get(1));
+		//Add another lunch box order, test The size of the list is 2?
+		C206_CaseStudy.doDeleteLBorder(LBorderList,newOrder.getLBItems());
+		assertEquals("Test that lunch box order arraylist size is 2?", 2, LBorderList.size());
+		assertSame("Test that the second lunch box order now is the first lunch box order in the list?", newOrder2, LBorderList.get(0));
+		assertSame("Test that the third lunch box order now is the second lunch box order in the list?", newOrder3, LBorderList.get(1));
 		
 	}
 	
@@ -107,10 +107,10 @@ public class C206_testLBorder {
 	
 	@After
 	public void tearDown() throws Exception {
-		newOrderBill = null;
-		newOrderBill2 = null;
-		newOrderBill3 = null;
-		orderBillList = null;
+		newOrder = null;
+		newOrder2 = null;
+		newOrder3 = null;
+		LBorderList = null;
 		
 
 	}
