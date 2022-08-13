@@ -189,9 +189,11 @@ public class C206_CaseStudyTest {
 			
 		}
 		
+		
+		
 		@Test
 		
-		public void testDeleteOrderBill() {
+		public void testDeleteMenuItem() {
 			// Menu Item list is not null, so that can delete a menu item
 			assertNotNull("Test if there is valid menu item arraylist to add to", menuItemList);
 					
@@ -326,7 +328,7 @@ public class C206_CaseStudyTest {
 		
 		@Test
 		
-		public void testDeleteOrderBill1() {
+		public void testDeleteOrderBill() {
 			// OrderBill list is not null, so that can delete a order bill
 			assertNotNull("Test if there is valid order bill arraylist to add to", orderBillList);
 					
@@ -346,6 +348,7 @@ public class C206_CaseStudyTest {
 			assertSame("Test that the third order bill now is the second order bill in the list?", newOrderBill3, orderBillList.get(1));
 			
 		}
+		
 		
 		@Test
 		public void testAddMonthlyMenu() {

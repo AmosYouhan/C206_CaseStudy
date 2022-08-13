@@ -80,7 +80,7 @@ public class C206_testMenu {
 	
 	@Test
 	
-	public void testDeleteOrderBill() {
+	public void testDeleteMenuItem() {
 		// Menu Item list is not null, so that can delete a menu item
 		assertNotNull("Test if there is valid menu item arraylist to add to", menuItemList);
 				
