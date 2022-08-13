@@ -111,7 +111,7 @@ public class C206_testMenu {
 		mc2 = null;
 		mc3 = null;
 		menuItemList = null;
-		System.out.println("Out");
+		
 
 	}
 	
