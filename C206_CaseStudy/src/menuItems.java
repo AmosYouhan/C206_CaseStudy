@@ -105,8 +105,6 @@ public class menuItems {
 			public static boolean doDeleteMenuItem(ArrayList<menuClass> menuList, String menuItem) {
 				// TODO Auto-generated method stub
 				
-			
-				
 				boolean isDelete = false;
 				
 				for(int i = 0; i< menuList.size(); i++) {
