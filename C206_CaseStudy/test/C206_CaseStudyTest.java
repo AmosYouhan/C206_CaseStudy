@@ -217,7 +217,7 @@ public class C206_CaseStudyTest {
 		@Test
 		public void testAddLB() {
 			// LB Order list is not null, so that can add a LB order
-			assertNotNull("Test if there is valid monthly menu arraylist to add to", lblist);
+			assertNotNull("Test if there is valid LB order arraylist to add to", lblist);
 			
 			//Given an empty list, after adding 1 LB order , the size of the list is 1
 			C206_CaseStudy.newlyAddedLBOrder(lblist, lb1);		
@@ -236,7 +236,7 @@ public class C206_CaseStudyTest {
 		@Test
 		public void testRetrieveAllLBOrder() {
 					// Test if LB order list is not null but empty, so that can add a LB order
-					assertNotNull("Test if there is valid monthly menu arraylist to add to", lblist);
+					assertNotNull("Test if there is valid LB order arraylist to add to", lblist);
 					
 					//test if the list of LB order retrieved from the CaseStudy is empty
 					String allMonthlyMenu= C206_CaseStudy.getLBOrder(lblist);
@@ -263,7 +263,7 @@ public class C206_CaseStudyTest {
 		
 		public void testDeleteLB() {
 			// LB order list is not null, so that can delete a LB order
-			assertNotNull("Test if there is valid monthly menu arraylist to add to", lblist);
+			assertNotNull("Test if there is valid LB order arraylist to add to", lblist);
 					
 			//Given an empty list, after adding 3 LB order, the size of the list is 3
 			C206_CaseStudy.newlyAddedLBOrder(lblist, lb1);	
